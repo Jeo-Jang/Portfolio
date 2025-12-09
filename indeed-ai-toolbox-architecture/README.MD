@@ -27,18 +27,18 @@ The application implements a **Hub-and-Spoke** topology where `streamlit_app.py`
 ### Application Structure Diagram
 ```mermaid
 graph TD
-    Hub[streamlit_app.py<br>(Central Orchestrator)] -->|Auth Gate| Check{Is Authenticated?}
-    Check -- No --> Stop[st.stop() / Login Screen]
-    Check -- Yes --> Nav[st.navigation]
+    Hub["streamlit_app.py<br>(Central Orchestrator)"] -->|Auth Gate| Check{"Is Authenticated?"}
+    Check -- No --> Stop["st.stop() / Login Screen"]
+    Check -- Yes --> Nav["st.navigation"]
     
     subgraph "Spokes (Page Modules)"
-        Nav --> ISO[📜 ISO Standards Agent]
-        Nav --> Pkg[📦 Packaging Agent]
-        Nav --> IDEMAT[🌍 IDEMAT Data Browser]
-        Nav --> MM[🎥 Content Generation]
+        Nav --> ISO["📜 ISO Standards Agent"]
+        Nav --> Pkg["📦 Packaging Agent"]
+        Nav --> IDEMAT["🌍 IDEMAT Data Browser"]
+        Nav --> MM["🎥 Content Generation"]
     end
     
-    ISO -.->|State| Session[st.session_state]
+    ISO -.->|State| Session["st.session_state"]
     Pkg -.->|State| Session
     IDEMAT -.->|State| Session
 ```
@@ -56,16 +56,16 @@ To prevent hallucinations and scope creep, the agent uses a **Pydantic-based Gua
 
 ```mermaid
 graph LR
-    User[User Input] --> Guard[🛡️ Guardrail Agent]
-    Guard -->|Validates Topic| Decision{Related to<br>Circularity?}
+    User["User Input"] --> Guard["🛡️ Guardrail Agent"]
+    Guard -->|Validates Topic| Decision{"Related to<br>Circularity?"}
     
-    Decision -- No --> Reject[Return 'Off-Topic' Error]
-    Decision -- Yes --> Main[Main ISO Agent]
+    Decision -- No --> Reject["Return 'Off-Topic' Error"]
+    Decision -- Yes --> Main["Main ISO Agent"]
     
     subgraph "RAG Pipeline"
-        Main -->|Query| VectorDB[(Vector Store)]
-        Main -->|Search| Web(Tavily API)
-        VectorDB & Web --> Synthesis[Citation-Backed Answer]
+        Main -->|Query| VectorDB[("Vector Store")]
+        Main -->|Search| Web("Tavily API")
+        VectorDB & Web --> Synthesis["Citation-Backed Answer"]
     end
 ```
 

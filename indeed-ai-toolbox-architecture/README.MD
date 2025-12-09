@@ -38,22 +38,41 @@ Unlike static software suites, this platform functions as a **living ecosystem**
 The application follows a **hub-and-spoke architecture** where `streamlit_app.py` serves as the central orchestrator, managing authentication, page registration, and global state, while individual page modules implement isolated functionality.
 
 ### Application Structure Diagram
+The application follows a strict execution flow: **Entry → Authentication → Registration → Navigation → Execution**.
 ```mermaid
 graph TD
-    Hub["streamlit_app.py<br>(Central Orchestrator)"] -->|Auth Gate| Check{"Is Authenticated?"}
-    Check -- No --> Stop["st.stop() / Login Screen"]
-    Check -- Yes --> Nav["st.navigation"]
-    
-    subgraph "Spokes (Page Modules)"
-        Nav --> ISO["📜 ISO Standards Agent"]
-        Nav --> Pkg["📦 Packaging Agent"]
-        Nav --> IDEMAT["🌍 IDEMAT Data Browser"]
-        Nav --> MM["🎥 Content Generation"]
+    subgraph "Entry Point"
+        Entry["streamlit_app.py Main<br>orchestrator"]
     end
-    
-    ISO -.->|State| Session["st.session_state"]
-    Pkg -.->|State| Session
-    IDEMAT -.->|State| Session
+
+    subgraph "Authentication Layer"
+        Entry --> Gate{"st.user.is_logged_in<br>Gate check"}
+        Logout["st.logout Session<br>termination"]
+        
+        Gate -- false --> LoginUI["login_screen()<br>SSO prompt"]
+        LoginUI --> OAuth["st.login<br>OAuth flow"]
+        OAuth -.->|Redirect| Gate
+    end
+
+    subgraph "Page Registry"
+        Gate -- true --> Reg["PAGES dict 6 categories<br>20+ pages"]
+        Reg --- Info["Info:<br>home.py, faq.py"]
+        Reg --- Audio["Audio:<br>transcribe.py..."]
+        Reg --- Image["Image:<br>generate.py..."]
+        Reg --- Chats["Chats:<br>simple_chat.py..."]
+        Reg --- Agents["Agents:<br>ISO.py..."]
+    end
+
+    subgraph "Navigation System"
+        Reg --> NavFunc["st.navigation(PAGES)<br>Returns Page object"]
+        NavFunc --> Exec["pg.run()<br>Executes selected page"]
+    end
+
+    subgraph "Global Resources"
+        Exec -.-> User["st.user<br>OIDC identity"]
+        Exec -.-> State["st.session_state<br>Per-session storage"]
+        Exec -.-> Secrets["st.secrets<br>API keys, JWT secrets"]
+    end
 ```
 
 ---

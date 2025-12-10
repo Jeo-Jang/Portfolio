@@ -307,7 +307,7 @@ The following diagram illustrates how the Reasoning Chat module integrates the s
 
 ```mermaid
 graph TD
-    A[reasoning_chat.py] --> B[streamlit_openai.Chat<br>configured with Tools]
+    A[reasoning_chat.py] --> B["streamlit_openai.Chat<br>configured with Tools"]
     
     subgraph Tool Capabilities
         C1[allow_code_interpreter=True]
@@ -328,8 +328,6 @@ graph TD
     
     D -.-> D
 
-    linkStyle 10 stroke-dasharray: 5, 5;
-    
     style B fill:#f9f,stroke:#333
 ```
 

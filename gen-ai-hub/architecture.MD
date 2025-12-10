@@ -180,12 +180,11 @@ This allows independent evolution of spokes without breaking the Hub.
 
 | File | Description |
 |------|-------------|
-| [**architecture.md**](gen-ai-hub/architecture.MD) | High-level system overview, Hub-and-Spoke architecture, lifecycle diagrams |
-| [**chat-systems.md**](gen-ai-hub/docs/chat-systems.MD) | Detailed architecture of all chat interfaces (OpenAI, Gemini, Reasoning Chat, Transcript Chat) |
-| [**agents.md**](gen-ai-hub/docs/agents.md) | ISO Agent and Packaging Agent architectures, Guardrail system, RAG pipeline |
-| [**authentication.md**](gen-ai-hub/docs/authentication.md) | Full authentication flow (Entra ID), SSO, JWT, RLS identity mapping |
-| [**persistence.md**](gen-ai-hub/docs/persistence.md) | Database schema, RLS, CRUD functions, auto-purge retention system |
-| [**heuristics.md**](gen-ai-hub/docs/heuristics.md) | Gemini auto-thinking heuristics (temperature, thought budget, cost protection) |
-| [**provider-routing.md**](gen-ai-hub/docs/provider-routing.md) | Dual-provider routing between OpenAI and Gemini, model selection rules |
-| [**patterns.md**](gen-ai-hub/docs/patterns.md) | Design patterns: Page Registry, Card Registry, Auth Gate, Stateful/Stateless patterns |
-| [**ui-showcase.md**](gen-ai-hub/docs/ui-showcase.md) | Screenshots, videos, and UI demonstrations for all major tools |
+| [**chat-systems.md**](./docs/chat-systems.md) | Architecture of all chat systems (OpenAI, Gemini, Reasoning, Transcript) |
+| [**agents.md**](./docs/agents.md) | ISO Agent, Packaging Agent, Guardrail system |
+| [**authentication.md**](./docs/authentication.md) | SSO, JWT, RLS identity mapping |
+| [**persistence.md**](./docs/persistence.md) | DB schema, CRUD, auto-purge logic |
+| [**heuristics.md**](./docs/heuristics.md) | Gemini auto-thinking heuristics |
+| [**provider-routing.md**](./docs/provider-routing.md) | Dual-provider model routing |
+| [**patterns.md**](./docs/patterns.md) | Page Registry, Auth Gate, Stateful/Stateless paradigms |
+| [**ui-showcase.md**](./docs/ui-showcase.md) | Screenshots, demos, UI visualization |

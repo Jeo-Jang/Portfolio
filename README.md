@@ -10,7 +10,7 @@
 
 | Project / Module | Domain | Status | Description |
 | :--- | :--- | :--- | :--- |
-| **[Enterprise AI Toolbox](./indeed-ai-toolbox-architecture)** | **GenAI Architecture** | 🟢 **Active** | A GDPR-compliant, Hub-and-Spoke GenAI platform serving 20+ enterprise tools. Includes full Pydantic guardrail and Azure infrastructure documentation. |
+| **[Gen AI Hub](./indeed-ai-toolbox-architecture)** | **GenAI Architecture** | 🟢 **Active** | A GDPR-compliant, Hub-and-Spoke GenAI platform serving 20+ enterprise tools. Includes full Pydantic guardrail and Azure infrastructure documentation. |
 | **[n8n Automation Workflows](./n8n-workflows)** | **Process Automation** | 🚧 *Coming Soon* | Documentation of end-to-end business automations, including C-Level reporting pipelines and custom Python nodes. |
 | **[GCP Data Workflows](./gcp-data-workflows)** | **Data & Analytics** | 🚧 *Planned* | Documentation and code for integrating Google ADK with **BigQuery** for large-scale data synchronization and reporting. |
 

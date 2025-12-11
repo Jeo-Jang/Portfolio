@@ -30,6 +30,7 @@ My work is driven by one goal: bridging the gap between **unstructured creative 
 1.  **Value-First Architecture:** System design is prioritized over raw script volume. This repo documents architecture (Mermaid diagrams, Data Flows) to show *why* solutions were built.
 2.  **Security by Design:** Whether building agents or integrations, security (GDPR, Auth) is baked in from day one, not patched on later.
 3.  **The Underestimated Cost:** I design systems with **Human-in-the-Loop (HIL)** thinking to address the common flaw of underestimating the human time required for AI verification. Solutions must minimize the "Evaluation Tax"—the manual effort needed to validate and approve AI output for high-stakes professional use.
+4.  **The Right Tool for the Layer:** I advocate for a **hybrid architecture**. I use **Python** for complex logic (Agents, RAG, Heuristics) and **Low-Code Orchestrators (n8n)** for efficient data movement and API glue. This portfolio showcases the "Heavy Lift" Python layer that powers the wider automation ecosystem.
 
 ---
 

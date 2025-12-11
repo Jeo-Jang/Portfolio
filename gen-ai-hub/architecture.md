@@ -1,7 +1,9 @@
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-Easy_Deploy-red)
+![Python](https://img.shields.io/badge/Python-3.13+-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Easy_Deploy-skyblue)
 ![Azure](https://img.shields.io/badge/Region-Germany%20West%20Central-darkgreen)
 ![Security](https://img.shields.io/badge/Security-AES--256-purple)
+![GDPR](https://img.shields.io/badge/GDPR-Compliant-khaki)
+![Architecutre](https://img.shields.io/badge/Architecture-Hub_&_Spoke-orange)
 
 
 

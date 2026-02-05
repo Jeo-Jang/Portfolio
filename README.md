@@ -41,9 +41,7 @@ My work is driven by one goal: bridging the gap between **unstructured creative 
 This demo showcases an agent-driven workflow supporting the **ISO** and **PPWR** ideation phase for engineers and designers.  
 A dedicated **Guardrail Agent** actively evaluates user inputs and **blocks requests that fall outside the defined regulatory and design scope**, ensuring relevance, compliance alignment, and reduced cognitive noise during early-stage ideation.
 
-<video src="assets/ISOagent.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/06cb383e-a132-4b7b-9ad4-a6aecd3ca883
 
 
 

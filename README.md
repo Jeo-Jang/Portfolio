@@ -34,6 +34,22 @@ My work is driven by one goal: bridging the gap between **unstructured creative 
 
 ---
 
+## 👀 Highlighted Demo
+## 👀 Highlighted Demo
+
+**ISOagent — Agentic Compliance Workflow**
+
+**ISO & PPWR Guardrail Agent — Ideation Phase Control**
+
+This demo showcases an agent-driven workflow supporting the **ISO** and **PPWR** ideation phase for engineers and designers.  
+A dedicated **Guardrail Agent** actively evaluates user inputs and **blocks requests that fall outside the defined regulatory and design scope**, ensuring relevance, compliance alignment, and reduced cognitive noise during early-stage ideation.
+
+<video src="assets/ISOagent.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+
+
 ## License
 CC BY-NC 4.0 — non-commercial use only. Contact me for commercial licensing.
 

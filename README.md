@@ -35,9 +35,6 @@ My work is driven by one goal: bridging the gap between **unstructured creative 
 ---
 
 ## 👀 Highlighted Demo
-## 👀 Highlighted Demo
-
-**ISOagent — Agentic Compliance Workflow**
 
 **ISO & PPWR Guardrail Agent — Ideation Phase Control**
 
